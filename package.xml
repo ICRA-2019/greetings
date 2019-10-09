@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>greetings</name>
+  <version>0.0.1</version>
+  <description>Robot Playground project for the KUKA Robot Learning Lab at KIT</description>
+
+  <maintainer email="wolfgang.wiedmeyer@kit.edu">Wolfgang Wiedmeyer</maintainer>
+
+  <license>GPLv3+</license>
+
+  <author email="wolfgang.wiedmeyer@kit.edu">Wolfgang Wiedmeyer</author>
+
+  <depend>rll_robot_playground_project</depend>
+  <exec_depend>message_runtime</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

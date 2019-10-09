@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot" default="iiwa" />
+
+  <node ns="$(arg robot)" name="move_sender" pkg="greetings" type="greetings.py" output="screen"/>
+
+</launch>
