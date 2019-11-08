@@ -27,7 +27,7 @@ def greetings(move_client):
     joint_2 = 1.832
     joint_3 = -0.3
     joint_4 = 2.01
-    joint_5 = -2
+    joint_5 = -2.0
     joint_6 = 0.0
     joint_7 = 1.4835
 
@@ -51,8 +51,11 @@ def greetings(move_client):
 
 
 def execute(move_client):
-    for x in range(0, 5):
-        rospy.loginfo("greetings back and forth rotation %d/%d", x + 1, 5)
+    num_greetings = 5
+
+    for num in range(0, num_greetings):
+        rospy.loginfo("greetings back and forth rotation %d/%d",
+                      num + 1, num_greetings)
         success = greetings(move_client)
         if not success:
             return False
@@ -60,7 +63,11 @@ def execute(move_client):
     return True
 
 
-if __name__ == '__main__':
+def main():
     rospy.init_node('greetings')
     client = RLLDefaultMoveClient(execute)
     client.spin()
+
+
+if __name__ == '__main__':
+    main()
