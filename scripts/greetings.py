@@ -47,14 +47,20 @@ def greetings(move_client):
         rospy.logerr("moving to second joint pos failed")
         return False
 
+    return True
+
 
 def execute(move_client):
     for x in range(0, 5):
         rospy.loginfo("greetings back and forth rotation %d/%d", x + 1, 5)
-        greetings(move_client)
+        success = greetings(move_client)
+        if not success:
+            return False
+
+    return True
 
 
 if __name__ == '__main__':
     rospy.init_node('greetings')
     client = RLLDefaultMoveClient(execute)
-    rospy.spin()
+    client.spin()
