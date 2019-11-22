@@ -10,7 +10,7 @@
 
   <author email="wolfgang.wiedmeyer@kit.edu">Wolfgang Wiedmeyer</author>
 
-  <depend>rll_robot_playground_project</depend>
+  <exec_depend>rll_robot_playground_project</exec_depend>
   <exec_depend>message_runtime</exec_depend>
   <buildtool_depend>catkin</buildtool_depend>
 
