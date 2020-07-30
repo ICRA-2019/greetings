@@ -24,7 +24,7 @@ from rll_move_client.client import RLLDefaultMoveClient
 
 def greetings(move_client):
     joint_1 = 0.6
-    joint_2 = 1.832
+    joint_2 = 1.6
     joint_3 = -0.3
     joint_4 = 2.01
     joint_5 = -2.0
